@@ -40,6 +40,9 @@ public abstract class Person implements Serializable, Identifiable {
     @Column(nullable = false)
     private String email;
 
+    @Column(insertable = false, updatable = false)
+    private String dtype;
+
     public Person(String firstName, String lastName, String pesel, Integer growth, Double weight, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
