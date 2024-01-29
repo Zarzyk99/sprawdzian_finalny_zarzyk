@@ -1,0 +1,4 @@
+TYP,imie,nazwisko,pesel,wzrost,waga,adres email,nazwa uczelni,rok studiów,kierunek studiów,wysokość stypendium,data rozpoczęcia zatrudnienia,aktualne stanowisko,aktualna pensja,wysokośc emerytury,ilość przepracowanych lat,
+employee,Jan, Kowalski,90090512345,180,80,jan.kowalski@wp.pl,null,null,null,null,2022-01-01,Programista,7000,null,null,
+student,Anna,Nowak,95050512345,165,60,anna.nowak@gmail.com,Uniwersytet Warszawski,3,Informatyka,1000,null,null,null,null,null,
+retiree,Andrzej,Wiśniewski,50050512345,175,70,andrzej.wisniewski@gmail.com,null,null,null,null,null,null,null,null,null,null

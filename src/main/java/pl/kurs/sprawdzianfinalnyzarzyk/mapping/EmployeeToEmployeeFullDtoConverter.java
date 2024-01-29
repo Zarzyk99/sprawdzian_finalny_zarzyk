@@ -1,0 +1,37 @@
+package pl.kurs.sprawdzianfinalnyzarzyk.mapping;
+
+import org.modelmapper.spi.MappingContext;
+import org.springframework.stereotype.Service;
+import pl.kurs.sprawdzianfinalnyzarzyk.dto.full.EmployeeFullDto;
+import pl.kurs.sprawdzianfinalnyzarzyk.models.Employee;
+
+@Service
+public class EmployeeToEmployeeFullDtoConverter implements PersonToPersonFullDtoConverter<Employee, EmployeeFullDto> {
+
+    @Override
+    public EmployeeFullDto convert(MappingContext<Employee, EmployeeFullDto> context) {
+        Employee source = context.getSource();
+        return EmployeeFullDto.builder()
+                .firstName(source.getFirstName())
+                .lastName(source.getLastName())
+                .pesel(source.getPesel())
+                .growth(source.getGrowth())
+                .weight(source.getWeight())
+                .email(source.getEmail())
+                .dateOfEmployment(source.getDateOfEmployment())
+                .currentPosition(source.getCurrentPosition())
+                .currentSalary(source.getCurrentSalary())
+                .dtype(source.getDtype())
+                .build();
+    }
+
+    @Override
+    public EmployeeFullDto getDtoType() {
+        return EmployeeFullDto.builder().build();
+    }
+
+    @Override
+    public Class<Employee> getBaseEntityClass() {
+        return Employee.class;
+    }
+}

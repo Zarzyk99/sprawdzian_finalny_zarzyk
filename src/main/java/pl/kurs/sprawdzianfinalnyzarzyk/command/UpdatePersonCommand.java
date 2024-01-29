@@ -7,7 +7,7 @@ import java.util.Map;
 
 @Getter
 @Setter
-public class CreatePersonCommand {
+public class UpdatePersonCommand {
     private String personType;
     private Map<String, Object> parameters;
 }

@@ -1,6 +1,8 @@
 package pl.kurs.sprawdzianfinalnyzarzyk.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,12 +17,15 @@ import java.util.Objects;
 public class Employee extends Person {
     private LocalDate dateOfEmployment;
 
-    private String currentPosition;
+    @ManyToOne
+    @JoinColumn(name = "position_id")
+    private Position currentPosition;
 
     private double currentSalary;
 
-    public Employee(String firstName, String lastName, String pesel, Integer growth, Double weight, String email,
-                    LocalDate dateOfEmployment, String currentPosition, double currentSalary) {
+    public Employee(String firstName, String lastName, String pesel, Integer growth,
+                    Double weight, String email, LocalDate dateOfEmployment,
+                    Position currentPosition, double currentSalary) {
         super(firstName, lastName, pesel, growth, weight, email);
         this.dateOfEmployment = dateOfEmployment;
         this.currentPosition = currentPosition;
@@ -33,7 +38,9 @@ public class Employee extends Person {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Employee employee = (Employee) o;
-        return Double.compare(employee.currentSalary, currentSalary) == 0 && Objects.equals(dateOfEmployment, employee.dateOfEmployment) && Objects.equals(currentPosition, employee.currentPosition);
+        return Double.compare(employee.currentSalary, currentSalary) == 0
+                && Objects.equals(dateOfEmployment, employee.dateOfEmployment)
+                && Objects.equals(currentPosition, employee.currentPosition);
     }
 
     @Override

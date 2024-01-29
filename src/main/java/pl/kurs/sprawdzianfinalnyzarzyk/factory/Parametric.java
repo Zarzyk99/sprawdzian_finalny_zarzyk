@@ -1,17 +1,11 @@
 package pl.kurs.sprawdzianfinalnyzarzyk.factory;
 
-import pl.kurs.sprawdzianfinalnyzarzyk.models.Person;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
 
-public interface PersonCreator {
+public interface Parametric {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-    String getType();
-
-    Person create(Map<String, Object> parameters);
 
     default String getStringParameter(String name, Map<String, Object> parameters) {
         return (String) parameters.get(name);
