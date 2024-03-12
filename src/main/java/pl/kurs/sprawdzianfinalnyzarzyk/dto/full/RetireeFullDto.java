@@ -5,7 +5,9 @@ import lombok.Value;
 
 @Value
 @Builder
-public class RetireeFullDto implements PersonFullDto{
+public class RetireeFullDto implements PersonFullDto {
+    private Long id;
+
     private String firstName;
 
     private String lastName;
@@ -21,8 +23,6 @@ public class RetireeFullDto implements PersonFullDto{
     private Double amountOfPension;
 
     private Integer yearsWorked;
-
-    private String dtype;
 
     @Override
     public String getType() {

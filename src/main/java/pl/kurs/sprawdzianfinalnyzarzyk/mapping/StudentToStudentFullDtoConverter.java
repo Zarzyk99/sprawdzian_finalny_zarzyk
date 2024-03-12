@@ -12,6 +12,7 @@ public class StudentToStudentFullDtoConverter implements PersonToPersonFullDtoCo
     public StudentFullDto convert(MappingContext<Student, StudentFullDto> context) {
         Student source = context.getSource();
         return StudentFullDto.builder()
+                .id(source.getId())
                 .firstName(source.getFirstName())
                 .lastName(source.getLastName())
                 .pesel(source.getPesel())
@@ -22,7 +23,6 @@ public class StudentToStudentFullDtoConverter implements PersonToPersonFullDtoCo
                 .yearOfStudy(source.getYearOfStudy())
                 .fieldOfStudy(source.getFieldOfStudy())
                 .amountOfScholarship(source.getAmountOfScholarship())
-                .dtype(source.getDtype())
                 .build();
     }
 

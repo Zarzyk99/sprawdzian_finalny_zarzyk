@@ -7,17 +7,13 @@ import lombok.Value;
 @Builder
 public class StudentSimpleDto implements PersonSimpleDto {
 
+    private Long id;
+
     private String firstName;
 
     private String lastName;
 
     private String email;
-
-    private String nameOfUniversity;
-
-    private String fieldOfStudy;
-
-    private String dtype;
 
     @Override
     public String getType() {

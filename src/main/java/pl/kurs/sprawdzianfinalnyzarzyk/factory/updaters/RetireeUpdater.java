@@ -16,7 +16,7 @@ public class RetireeUpdater implements PersonUpdater, Parametric {
 
     @Override
     public Person update(Person person, Map<String, Object> parameters) {
-        if (person instanceof Retiree){
+        if (person instanceof Retiree) {
             Retiree retiree = (Retiree) person;
             retiree.setFirstName(getStringParameter("firstName", parameters));
             retiree.setLastName(getStringParameter("lastName", parameters));
@@ -27,7 +27,7 @@ public class RetireeUpdater implements PersonUpdater, Parametric {
             retiree.setAmountOfPension(getDoubleParameters("amountOfPension", parameters));
             retiree.setYearsWorked(getIntegerParameters("yearsWorked", parameters));
             return retiree;
-        }else {
+        } else {
             throw new IllegalArgumentException("Invalid person type for RetireeUpdater");
         }
     }

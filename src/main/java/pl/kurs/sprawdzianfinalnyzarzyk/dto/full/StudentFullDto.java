@@ -6,6 +6,8 @@ import lombok.Value;
 @Value
 @Builder
 public class StudentFullDto implements PersonFullDto {
+    private Long id;
+
     private String firstName;
 
     private String lastName;
@@ -25,8 +27,6 @@ public class StudentFullDto implements PersonFullDto {
     private String fieldOfStudy;
 
     private Double amountOfScholarship;
-
-    private String dtype;
 
     @Override
     public String getType() {

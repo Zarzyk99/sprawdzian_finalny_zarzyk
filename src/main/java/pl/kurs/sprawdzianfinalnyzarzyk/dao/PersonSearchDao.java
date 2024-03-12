@@ -90,16 +90,9 @@ public class PersonSearchDao implements IPersonSearchDao {
         TypedQuery<Person> query = em.createQuery(criteriaQuery);
 
         return query.getResultList();
-
-
-
-//        criteriaQuery.select(root).where(criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()])));
-//
-//        return em.createQuery(criteriaQuery).getResultList();
-
     }
 
-    private boolean isNotNull(Object object){
+    private boolean isNotNull(Object object) {
         return object != null;
     }
 }

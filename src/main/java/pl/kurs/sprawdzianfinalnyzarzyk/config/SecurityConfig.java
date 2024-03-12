@@ -50,6 +50,11 @@ public class SecurityConfig {
                         .requestMatchers(POST, "/api/people").hasRole("ADMIN")
                         .requestMatchers(PUT, "/api/people/**").hasRole("ADMIN")
                         .requestMatchers(POST, "/api/people/upload").hasAnyRole("ADMIN", "IMPORTER")
+                        .requestMatchers(POST, "/api/people/statud").hasAnyRole("ADMIN", "IMPORTER")
+                        .requestMatchers(DELETE, "/api/people/{id}").hasRole("ADMIN")
+                        .requestMatchers(POST, "/api/employment/**").hasAnyRole("ADMIN", "EMPLOYEE")
+                        .requestMatchers(GET, "/api/employment/**").hasAnyRole("ADMIN", "EMPLOYEE")
+                        .requestMatchers(DELETE, "/api/employment/**").hasAnyRole("ADMIN", "EMPLOYEE")
                         .anyRequest().authenticated())
                 .httpBasic();
         return http.build();

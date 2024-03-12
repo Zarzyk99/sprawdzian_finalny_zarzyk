@@ -23,28 +23,76 @@ public class Employee extends Person {
 
     private double currentSalary;
 
-    public Employee(String firstName, String lastName, String pesel, Integer growth,
-                    Double weight, String email, LocalDate dateOfEmployment,
-                    Position currentPosition, double currentSalary) {
+    public Employee(String firstName, String lastName, String pesel, Integer growth, Double weight, String email) {
         super(firstName, lastName, pesel, growth, weight, email);
-        this.dateOfEmployment = dateOfEmployment;
+    }
+
+    public Employee(String firstName, String lastName, String pesel, Integer growth, Double weight,
+                    String email, List<Employment> employments, String currentPosition, double currentSalary) {
+        super(firstName, lastName, pesel, growth, weight, email);
+        this.employments = employments;
         this.currentPosition = currentPosition;
         this.currentSalary = currentSalary;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Employee employee = (Employee) o;
-        return Double.compare(employee.currentSalary, currentSalary) == 0
-                && Objects.equals(dateOfEmployment, employee.dateOfEmployment)
-                && Objects.equals(currentPosition, employee.currentPosition);
+    public Employee setFirstName(String firstName) {
+        super.setFirstName(firstName);
+        return this;
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), dateOfEmployment, currentPosition, currentSalary);
+    public Employee setLastName(String lastName) {
+        super.setLastName(lastName);
+        return this;
+    }
+
+    @Override
+    public Employee setPesel(String pesel) {
+        super.setPesel(pesel);
+        return this;
+    }
+
+    @Override
+    public Employee setGrowth(Integer growth) {
+        super.setGrowth(growth);
+        return this;
+    }
+
+    @Override
+    public Employee setWeight(Double weight) {
+        super.setWeight(weight);
+        return this;
+    }
+
+    @Override
+    public Employee setEmail(String email) {
+        super.setEmail(email);
+        return this;
+    }
+
+    @Override
+    public Employee setDtype(String dtype) {
+        super.setDtype(dtype);
+        return this;
+    }
+
+    public Employee setDateOfEmployment(LocalDate dateOfEmployment) {
+        this.dateOfEmployment = dateOfEmployment;
+        return this;
+    }
+
+    public void setCurrentPosition(String currentPosition) {
+        this.currentPosition = currentPosition;
+    }
+
+    public Employee setEmployments(List<Employment> employments) {
+        this.employments = employments;
+        return this;
+    }
+
+    public Employee setCurrentSalary(double currentSalary) {
+        this.currentSalary = currentSalary;
+        return this;
     }
 }

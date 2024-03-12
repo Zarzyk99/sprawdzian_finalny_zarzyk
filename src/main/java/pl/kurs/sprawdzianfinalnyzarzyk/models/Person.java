@@ -1,6 +1,7 @@
 package pl.kurs.sprawdzianfinalnyzarzyk.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -66,5 +67,40 @@ public abstract class Person implements Serializable, Identifiable {
     @Override
     public int hashCode() {
         return Objects.hash(id, firstName, lastName, pesel, growth, weight, email);
+    }
+
+    public Person setFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+    public Person setLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    public Person setPesel(String pesel) {
+        this.pesel = pesel;
+        return this;
+    }
+
+    public Person setGrowth(Integer growth) {
+        this.growth = growth;
+        return this;
+    }
+
+    public Person setWeight(Double weight) {
+        this.weight = weight;
+        return this;
+    }
+
+    public Person setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public Person setDtype(String dtype) {
+        this.dtype = dtype;
+        return this;
     }
 }

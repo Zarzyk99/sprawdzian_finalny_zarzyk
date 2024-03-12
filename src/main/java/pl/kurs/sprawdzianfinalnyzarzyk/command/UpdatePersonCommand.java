@@ -9,5 +9,6 @@ import java.util.Map;
 @Setter
 public class UpdatePersonCommand {
     private String personType;
+
     private Map<String, Object> parameters;
 }

@@ -11,6 +11,7 @@ public class EmployeeToEmployeeSimpleDtoConverter implements PersonToPersonSimpl
     public EmployeeSimpleDto convert(MappingContext<Employee, EmployeeSimpleDto> context) {
         Employee source = context.getSource();
         return EmployeeSimpleDto.builder()
+                .id(source.getId())
                 .firstName(source.getFirstName())
                 .lastName(source.getLastName())
                 .email(source.getEmail())

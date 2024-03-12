@@ -1,0 +1,10 @@
+type,firstName,lastName,pesel,growth,weight,email,nameOfUniversity,yearOfStudy,fieldOfStudy,amountOfScholarship,dateOfEmployment,currentPosition,currentSalary,amountOfPension,yearsWorked
+retiree,Jan,Kowalczyk,61101345643,175,72,janek.kow@gmail.com,,,,,,,,2342.32,42
+student,Maciek,Kowalski,91022745254,180,80,maciek.kowalskii@wp.pl,PRz,2,Energetyka,754.34,,,,,
+employee,Darek,Noga,71032627476,185,95,darek.ng@o2.pl,,,,,2015-02-20,Serwisant,7435.00,,
+retiree,Wojciek,Tkaczyk,65051245645,175,72,wojciech.tk@gmail.com,,,,,,,,1842.32,42
+student,Adam,Nowak,91031445265,180,80,adam.nowak@wp.pl,AGH,2,Fizyka,654.34,,,,,
+employee,Zbigniew,Sosna,71032027443,185,95,zbigniewss@wp.pl,,,,,2017-02-20,Automatyk,6535.00,,
+retiree,Mariusz,Czeladka,59042145654,172,70,maariuszcz@gmail.com,,,,,,,,2142.32,42
+student,Grzegorz,Wolak,96112045234,176,72,wolaak@wp.pl,URz,2,Prawo,720.34,,,,,
+employee,Karol,Walczuk,83072527437,178,78,waalczukk@gmail.com,,,,,2020-02-20,Elektryk,4835.00,,

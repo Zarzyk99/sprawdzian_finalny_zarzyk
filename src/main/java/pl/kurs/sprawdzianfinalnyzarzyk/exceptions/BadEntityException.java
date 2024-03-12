@@ -1,6 +1,6 @@
 package pl.kurs.sprawdzianfinalnyzarzyk.exceptions;
 
-public class BadEntityException extends RuntimeException{
+public class BadEntityException extends RuntimeException {
 
     public BadEntityException(String message) {
         super(message);

@@ -11,11 +11,10 @@ public class RetireeToRetireeSimpleDtoConverter implements PersonToPersonSimpleD
     public RetireeSimpleDto convert(MappingContext<Retiree, RetireeSimpleDto> context) {
         Retiree source = context.getSource();
         return RetireeSimpleDto.builder()
+                .id(source.getId())
                 .firstName(source.getFirstName())
                 .lastName(source.getLastName())
                 .email(source.getEmail())
-                .yearsWorked(source.getYearsWorked())
-                .dtype(source.getDtype())
                 .build();
     }
 

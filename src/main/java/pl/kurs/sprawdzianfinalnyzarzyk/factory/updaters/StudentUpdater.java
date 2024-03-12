@@ -16,7 +16,7 @@ public class StudentUpdater implements PersonUpdater, Parametric {
 
     @Override
     public Person update(Person person, Map<String, Object> parameters) {
-        if (person instanceof Student){
+        if (person instanceof Student) {
             Student student = (Student) person;
             student.setFirstName(getStringParameter("firstName", parameters));
             student.setLastName(getStringParameter("lastName", parameters));
@@ -30,7 +30,7 @@ public class StudentUpdater implements PersonUpdater, Parametric {
             student.setAmountOfScholarship(getDoubleParameters("amountOfScholarship", parameters));
             return student;
         } else {
-            throw new IllegalArgumentException("Invalid person type for EmployeeUpdater");
+            throw new IllegalArgumentException("Invalid person type for StudentUpdater");
 
         }
     }

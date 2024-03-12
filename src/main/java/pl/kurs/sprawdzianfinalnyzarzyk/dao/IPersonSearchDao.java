@@ -6,5 +6,5 @@ import pl.kurs.sprawdzianfinalnyzarzyk.models.request.PersonSearchRequest;
 import java.util.List;
 
 public interface IPersonSearchDao {
-    public List<Person> findByCriteria(PersonSearchRequest request);
+    List<Person> findByCriteria(PersonSearchRequest request);
 }

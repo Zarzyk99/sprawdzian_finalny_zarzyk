@@ -11,12 +11,10 @@ public class StudentToStudentSimpleDtoConverter implements PersonToPersonSimpleD
     public StudentSimpleDto convert(MappingContext<Student, StudentSimpleDto> context) {
         Student source = context.getSource();
         return StudentSimpleDto.builder()
+                .id(source.getId())
                 .firstName(source.getFirstName())
                 .lastName(source.getLastName())
                 .email(source.getEmail())
-                .nameOfUniversity(source.getNameOfUniversity())
-                .fieldOfStudy(source.getFieldOfStudy())
-                .dtype(source.getDtype())
                 .build();
     }
 

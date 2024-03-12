@@ -1,6 +1,5 @@
 package pl.kurs.sprawdzianfinalnyzarzyk.models;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

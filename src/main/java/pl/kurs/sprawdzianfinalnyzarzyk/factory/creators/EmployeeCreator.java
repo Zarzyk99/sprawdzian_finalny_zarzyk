@@ -26,13 +26,5 @@ public class EmployeeCreator implements PersonCreator, Parametric {
                 getStringParameter("currentPosition", parameters),
                 getDoubleParameters("currentSalary", parameters));
     }
-//
-//    @Override
-//    public Person createPersonFromCsv(String[] line) {
-//        return new Employee(line[1], line[2], line[3], Integer.parseInt(line[4]), Double.parseDouble(line[5]),
-//                line[6], LocalDate.parse(line[11], DateTimeFormatter.ofPattern("yyyy-MM-dd")),
-//                line[12], Double.parseDouble(line[13]));
-//
-//
-//    }
+
 }

@@ -10,7 +10,8 @@ import java.util.List;
 @AllArgsConstructor
 public class ExceptionResponseBody {
     private List<String> errorsMessages;
-    private String errorCode;
-    private LocalDateTime timestamp;
 
+    private String errorCode;
+
+    private LocalDateTime timestamp;
 }
